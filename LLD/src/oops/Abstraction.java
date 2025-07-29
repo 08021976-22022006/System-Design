@@ -1,98 +1,114 @@
 package oops;
 
-// Payment System
-interface PaymentSystem{
+// ✅ Interface - Defines a contract for all payment systems
+interface PaymentSystem {
     void makePayment(double amount);
-    void paymentStatus();
+    void refundPayment(double amount);
 }
 
-class CreditCardPayment implements PaymentSystem{
+// ✅ Implementation 1 - Credit Card
+class CreditCardPayment implements PaymentSystem {
     @Override
     public void makePayment(double amount) {
-        System.out.println("Payment of " + amount + " made using Credit Card!" );
+        System.out.println("Payment of " + amount + " made using Credit Card!");
     }
 
     @Override
-    public void paymentStatus() {
-        System.out.println("Payment Successful using Credit Card!");
+    public void refundPayment(double amount) {
+        System.out.println("Refund of " + amount + " successful using Credit Card!");
     }
 }
 
-class UPIPayment implements PaymentSystem{
+// ✅ Implementation 2 - UPI
+class UPIPayment implements PaymentSystem {
     @Override
     public void makePayment(double amount) {
-        System.out.println("Payment of " + amount + " made using UPI Payment!" );
+        System.out.println("Payment of " + amount + " made using UPI!");
     }
 
     @Override
-    public void paymentStatus() {
-        System.out.println("Payment Successful using UPI Payment!");
+    public void refundPayment(double amount) {
+        System.out.println("Refund of " + amount + " successful using UPI!");
     }
-    
 }
 
-class DebitCardPayment implements PaymentSystem{
+// ✅ Implementation 3 - Debit Card
+class DebitCardPayment implements PaymentSystem {
     @Override
     public void makePayment(double amount) {
-        System.out.println("Payment of " + amount + " made using Debit Card Payment!" );
+        System.out.println("Payment of " + amount + " made using Debit Card!");
     }
 
     @Override
-    public void paymentStatus() {
-        System.out.println("Payment Successful using Debit Card!");       
+    public void refundPayment(double amount) {
+        System.out.println("Refund of " + amount + " successful using Debit Card!");
     }
-    
 }
 
-
-abstract class BankTransaction{
+// ✅ Abstract Class - Defines a blueprint for all bank transactions
+abstract class BankTransaction {
     abstract void deposit(double amount);
     abstract void withdraw(double amount);
-    void printTransactionDetails(){
-        System.out.println("Transaction Details printed1");
+
+    void printTransactionDetails() {
+        System.out.println("Transaction Details printed!");
     }
 }
 
-class NetBanking extends BankTransaction{
+// ✅ NetBanking Transaction
+class NetBanking extends BankTransaction {
     @Override
     void deposit(double amount) {
-
+        System.out.println("Deposited " + amount + " using Net Banking");
     }
 
     @Override
     void withdraw(double amount) {
-
+        System.out.println("Withdrawn " + amount + " using Net Banking");
     }
 }
 
-class NEFT extends BankTransaction{
+// ✅ NEFT Transaction
+class NEFT extends BankTransaction {
     @Override
     void deposit(double amount) {
-
+        System.out.println("Deposited " + amount + " using NEFT");
     }
 
     @Override
     void withdraw(double amount) {
-        
+        System.out.println("Withdrawn " + amount + " using NEFT");
     }
 }
 
-class IMPS extends BankTransaction{
-
+// ✅ IMPS Transaction
+class IMPS extends BankTransaction {
     @Override
     void deposit(double amount) {
-           
+        System.out.println("Deposited " + amount + " using IMPS");
     }
 
     @Override
     void withdraw(double amount) {
-        
+        System.out.println("Withdrawn " + amount + " using IMPS");
     }
-    
 }
 
+// ✅ Main Class
 public class Abstraction {
+    public static void main(String[] args) {
+        PaymentSystem payment1 = new CreditCardPayment();
+        payment1.makePayment(1000);
+        payment1.refundPayment(500);
 
+        BankTransaction transaction1 = new NetBanking();
+        transaction1.deposit(2000);
+        transaction1.withdraw(1000);
+
+        BankTransaction transaction2 = new IMPS();
+        transaction2.deposit(3000);
+        transaction2.withdraw(1500);
+    }
 }
 
 
