@@ -44,7 +44,7 @@ Establishes parent-child relationships
 
 
 
-============================================================================================================================================================================================
+=============================================================================================================================
 
 
 
@@ -78,7 +78,7 @@ Return type	can be same or different
 
 
 
-============================================================================================================================================================================================
+=============================================================================================================================
 
 
 
@@ -140,9 +140,7 @@ Abstract:
 
 
 
-========================================================================================================================================================================================================================================================================================================================================================================================
-
-
+=======================================================================================================================================================================================================================================================================================================================================================================================
 
 
 
@@ -338,7 +336,324 @@ Types of Coupling:
 
 &nbsp;	
 
-&nbsp;	3. 
+&nbsp;	3. Control Coupling 
+
+&nbsp;		One module controls the logic another module
+
+&nbsp;		Example: Binary Search depends on the sorting.
+
+
+
+&nbsp;	4. Stamp Coupling
+
+&nbsp;		Modules shares a composite data structure like object, json, xml, but only use a part of it
+
+&nbsp;		Example: After logging a system module got whole user details
+
+&nbsp;			For Welcome Page only need username
+
+&nbsp;			For ChechOut Page only need of address and phone
+
+
+
+&nbsp;	5. Data Coupling (Good)
+
+&nbsp;		Modules are communicating via simple data parameters
+
+&nbsp;		User\_id
+
+&nbsp;		Get\_user\_name(user\_id)
+
+&nbsp;		Display\_user\_data(user\_id)		
+
+&nbsp;	
+
+&nbsp;	6. No Coupling(Independent Module)
+
+&nbsp;		Modules have no interaction
+
+&nbsp;		Example: Creating a connection module --> Logger Module.
+
+
+
+
+
+=============================================================================================================================
+
+
+
+
+
+Separation OF Concerns:
+
+-----------------------
+
+&nbsp;	The development process has too many different responsibilities. User Interface design, database process, exception handling, and many other tasks can be examples of responsibilities.
+
+
+
+What does MVC look like? 
+
+&nbsp;	Request
+
+&nbsp;	------->  Controller 
+
+&nbsp;	|	      |
+
+&nbsp;	|	  Logic File
+
+&nbsp;	|	      |
+
+&nbsp;     User	    Model
+
+&nbsp;	|	      |
+
+&nbsp;	|	    View
+	|	      |
+
+&nbsp;	---------------
+
+&nbsp;          Response
+
+
+
+
+
+Monolithic or Layered Architecture:
+
+&nbsp;	Examples: Creating database 
+
+&nbsp;	Handling request response
+
+&nbsp;	UI
+
+&nbsp;	Message Part
+
+Microservices Architecture:
+
+Model-View-Controller (MVC):
+
+&nbsp;			
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+UML Diagram:
+
+------------
+
+Aggregation: ----<>(white colored)
+
+Composition: ----</>(black colored)
+
+Associations: ----> 
+
+&nbsp;	Inheritance --> Is a Relationship
+
+&nbsp;	Aggregation --> Has a Relationship
+
+&nbsp;	Composition --> Part Of Relationship
+
+
+
+Unified Modeling Language --> like a blue print (Class and State)
+
+2 Types:
+
+&nbsp;	Structural Diagram: defects the static aspects of the system, which represent those parts of a diagram forming a main structure and therefore stable
+
+&nbsp;	Behavioural Diagram: 
+
+
+
+Class Diagram:
+
+&nbsp;	Important UML diagram used for software application development
+
+&nbsp;	A class diagram describes the types of objects in the 
+
+&nbsp;	----------->  Association(Straight Line)
+
+&nbsp;	-----------|> Inheritance(Straight Line)
+
+&nbsp;	-----------|> Realization / Implementation
+
+&nbsp;	----------->  Dependency
+
+&nbsp;	-----------<> Aggregation
+
+&nbsp;	-----------<//> Composition
+
+
+
+1. Create a box
+2. Heading should be provided (class name or the entity name)
+3. Data Members
+4. Behaviour Method
+
+
+
+&nbsp;--------------------------------
+
+|	class name		|
+
+|--------------------------------
+
+|				|
+
+|	Data Members		|
+
+|				|
+
+|				|
+|--------------------------------
+
+|				|
+
+|	Behaviour Method	|
+
+|				|
+
+|--------------------------------
+
+
+
+
+
+
+
+(+)->public
+
+(#)->protected
+
+(-)->Private
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Home Work: WAP for Cohesion and Coupling for two modules representing high cohesion and tight couple, low cohesion, all the types from worst to best.
+
+
+
+
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_X\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

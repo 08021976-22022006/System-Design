@@ -1,6 +1,9 @@
 package oops;
 
+
 // ✅ Interface - Defines a contract for all payment systems
+
+// loose coupling 
 interface PaymentSystem {
     void makePayment(double amount);
     void refundPayment(double amount);
