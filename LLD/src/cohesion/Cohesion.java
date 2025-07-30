@@ -35,13 +35,23 @@ class OrderProcessorLowCohesion{
         saveToDatabaseHistory(order);
     }
 
-    void deiliveryOperation(Order order){
-        System.out.println("Deliverying order: " + order.getOrderId());
+    private void validateOrder(Order order) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'validateOrder'");
     }
 
-    void crudOperation(Order order){
-        System.out.println("Performing CRUD operation on order: " + order.getOrderId());
+    private void prepareOrder(Order order) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'prepareOrder'");
     }
+
+    private void saveToDatabaseHistory(Order order) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'saveToDatabaseHistory'");
+    }
+
+
+
 }
 
 
