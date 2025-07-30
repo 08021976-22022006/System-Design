@@ -569,6 +569,152 @@ Home Work: WAP for Cohesion and Coupling for two modules representing high cohes
 
 
 
+30-07-2025
+
+
+
+### SOLID PRINCIPLES AND DESIGN PRACTICES
+
+-------------------------------------------------------------------------
+
+
+
+&nbsp;	Tells the way to write a code.
+
+As a software systems grow, they tend to become complex and harder to change. A Small change in one part can cause unexpected issues elsewhere. this is rigidity and fragility in code.
+
+
+Common problems in large codebases:
+---
+
+&nbsp;	Tight Coupling
+
+&nbsp;	Low Cohesion
+
+&nbsp;	Code Smells
+
+&nbsp;	Difficult Testing and Maintenance
+
+
+
+
+
+##### Birth of SOLID Principles:
+
+&nbsp;	Developers Start building large scale systems, they noticed these recurring issues.
+
+&nbsp;	Need for guidelines to make software, 	
+
+
+
+#### SOLID:
+
+
+S - Single Responsibility Principle (SRP)
+---
+
+&nbsp;	- A Class should have a single responsibility 
+
+&nbsp;	- If a class has many responsibility, it increases the possibility of bugs because making changes to one of the it responsibility, could affect the other ones without you knowing
+
+###### Goal:
+
+&nbsp;	This principle aims to separate behaviours so that if bugs arise as a result of your change, it wont affect other unrelated behaviours.
+
+&nbsp;       Each class has a single responsibility and easily able to extend
+
+&nbsp;       Testing of business logic become easy
+
+&nbsp;	
+
+##### O - Open Closed Principle (OCP)
+
+&nbsp;	- Class should be open for extension but close for modification.
+
+&nbsp;	- Changing the current behaviour will affect all the systems using that class.
+
+###### Goal:
+
+&nbsp;	This principles aim to extend a class's behaviour without changing the existing behaviour of that class.
+	This avoid causing bug wherever the class is being used
+
+##### 
+
+##### 
+
+##### L - Liskov Principle (LSP)
+
+&nbsp;	- When a child class cannot perform the same action as its parent class, this can cause bugs.
+
+&nbsp;	- The child class should be able to process the same requests and deliver the same result as the parent class or it could deliver a result that is of the same type.
+
+
+
+Home Work:
+
+Add Invoice:
+Ad feature following OCP:
+
+New Feature: Send notification using SMS.
+
+
+
+
+
+##### I - Interface Segregation Principle (ISP)
+
+&nbsp;	- Clients should not be forced to depend on methods that they do not use.
+
+&nbsp;	- Separate the class based on the tasks.
+
+
+
+###### Goal:
+
+&nbsp;	This principle aims at splitting a set of actions into smaller sets so that a class executes only the set of actions it requires.
+
+
+
+Home Work:
+
+Document Converter Class:
+
+convertToPDF();
+
+convertToWord();
+
+convertToJPEG();
+
+
+
+###### BENIFITS:
+
+&nbsp;	- Classes are not burdened with unnecessary tasks or methods
+
+&nbsp;	- Interfaces become role specific
+
+&nbsp;	- Promotes flexibility, modularity and maintainability
+
+
+
+##### D - Dependency Inversion Principle
+
+&nbsp;	- High Level modules should not depend on low-level modules. Both should depend on the abstraction
+
+&nbsp;	- Abstractions should not depend on details. Details should depend on abstraction
+
+&nbsp;	- *High-Level Module:* Class that executes an action with a tool.
+	- *Low-Level Module:* The tool that is needed to execute the action
+
+&nbsp;	- *Abstraction:* Represents an interface that connects the two classes
+
+&nbsp;	- *Details:* How the tools works
+
+
+
+###### Goal:
+
+&nbsp;	This principle aims at reducing the dependency of a high-level class on the low-level class by introducing an interface.
 
 
 
@@ -576,54 +722,29 @@ Home Work: WAP for Cohesion and Coupling for two modules representing high cohes
 
 
 
+##### Advantages of SOLID Principles:
 
+&nbsp;	- Achieve the reduction in complexity of the code
 
+&nbsp;	- Increase readability, extensibility, and maintenance
 
+&nbsp;	- Increase scalability, code flexibility, and readability
 
+&nbsp;	- Achieve Better Testability
 
+&nbsp;	- Reduce tight coupling
 
+&nbsp;	- Reduce error and implement Reusability
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+&nbsp;	- Increase Parallel development
 
 
 
 &nbsp;	
+
+
+
+
 
 
 
