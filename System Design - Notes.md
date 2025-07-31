@@ -6,11 +6,11 @@ System Design:
 
 Inheritance:
 
--------------
+---
 
 
 
-Allows one class to inherit properties and behaviours from another class. It helps avoid duplications of code by enabling a new class to reuse code from a existing class. 
+Allows one class to inherit properties and behaviours from another class. It helps avoid duplications of code by enabling a new class to reuse code from a existing class.
 
 A subclass (Child class) class can inherit from super class (Parent class) using extend keyword.
 
@@ -18,15 +18,15 @@ A subclass (Child class) class can inherit from super class (Parent class) using
 
 Types of Inheritance:
 
-&nbsp;	Single Inheritance
+ 	Single Inheritance
 
-&nbsp;	Multilevel Inheritance
+ 	Multilevel Inheritance
 
-&nbsp;	Multiple Inheritance
+ 	Multiple Inheritance
 
-&nbsp;	Hierarchical Inheritance
+ 	Hierarchical Inheritance
 
-&nbsp;	Hybrid Inheritance
+ 	Hybrid Inheritance
 
 
 
@@ -50,7 +50,7 @@ Establishes parent-child relationships
 
 Polymorphism:
 
---------------
+---
 
 
 
@@ -58,9 +58,9 @@ Polymorphism means "Many Forms" - ability of an object to take an many forms, al
 
 Two main types:
 
-&nbsp;	compile time polymorphism --> method overloading
+ 	compile time polymorphism --> method overloading
 
-&nbsp;	run  time polymorphim ---> method overriding using inheritance
+ 	run  time polymorphim ---> method overriding using inheritance
 
 
 
@@ -86,23 +86,23 @@ Return type	can be same or different
 
 Abstract Class:
 
----------------
+---
 
 
 
 Abstract Class:
 
-&nbsp;	is like a blue print for creating other classes. its a class that cannot be instantiated on it own, but it provides a structure that other class can follow.
+ 	is like a blue print for creating other classes. its a class that cannot be instantiated on it own, but it provides a structure that other class can follow.
 
-&nbsp;	Think of it as a partially built house - you cant live in it, but you can use it as a starting point to built a complete house
+ 	Think of it as a partially built house - you cant live in it, but you can use it as a starting point to built a complete house
 
 
 
 Interface:
 
-&nbsp;	An interface is like a contract that a class must follow. It defines a set of methods that a class must implement, but it does not provide any implementation itself (only method signatures).
+ 	An interface is like a contract that a class must follow. It defines a set of methods that a class must implement, but it does not provide any implementation itself (only method signatures).
 
-&nbsp;	Think of it like a remote control interface — it tells what buttons are available (methods), but not how the TV responds to each (implementation). The class that "implements" the interface decides what each button actually does.
+ 	Think of it like a remote control interface — it tells what buttons are available (methods), but not how the TV responds to each (implementation). The class that "implements" the interface decides what each button actually does.
 
 
 
@@ -110,23 +110,23 @@ Interface:
 
 |||| Abstract Class                         |||| Interface                          ||||
 
------ ------------------------------------- ----- --------------------------------- -----
+---
 
 abstract class payment {                   |||| interface payments {               ||||
 
-&nbsp;   void processPayment();                 ||||     void paymentMethod();          ||||
+    void processPayment();                 ||||     void paymentMethod();          ||||
 
-&nbsp;                                          ||||     boolean isCompleted();         ||||
+                                           ||||     boolean isCompleted();         ||||
 
-&nbsp;   boolean isCompleted() {                |||| }                                  ||||
+    boolean isCompleted() {                |||| }                                  ||||
 
-&nbsp;       Print("Yes!");                     ||||                                    ||||
+        Print("Yes!");                     ||||                                    ||||
 
-&nbsp;   }                                      ||||                                    ||||
+    }                                      ||||                                    ||||
 
 }                                          ||||                                    ||||
 
------------------------------------------------------------------------------------------
+---
 
 
 
@@ -136,7 +136,7 @@ Abstract:
 
 * Process of hiding internal implementation details and showing only essential features to the user
 
-&nbsp;	
+ 
 
 
 
@@ -150,7 +150,7 @@ Abstract:
 
 Cohesion And Coupling
 
----------------------
+---
 
 
 
@@ -176,13 +176,13 @@ Coupling:
 
 
 
-&nbsp;           Cohesion
+            Cohesion
 
 High  ------------------> Low
 
 
 
-&nbsp;           Coupling
+            Coupling
 
 High  -------------------> Low
 
@@ -196,73 +196,73 @@ High  -------------------> Low
 
 Types of Cohesion:
 
-&nbsp;	Degree of cohesion moves from low to high
+ 	Degree of cohesion moves from low to high
 
-&nbsp;	1. Coincidence Cohesion (Worst)
+ 	1. Coincidence Cohesion (Worst)
 
-&nbsp;		Modules having no meaning relationship.
+ 		Modules having no meaning relationship.
 
-&nbsp;		Example: Class contains 2 functions:
+ 		Example: Class contains 2 functions:
 
-&nbsp;			Calculate bill
+ 			Calculate bill
 
-&nbsp;			Printing Logo
+ 			Printing Logo
 
 
 
-&nbsp;	2. Logical Cohesion
+ 	2. Logical Cohesion
 
-&nbsp;		Modules are grouped because they fall under the same category, but perform different task.
+ 		Modules are grouped because they fall under the same category, but perform different task.
 
-&nbsp;		Example: A CAB Service App Project
+ 		Example: A CAB Service App Project
 
-&nbsp;			Developer
+ 			Developer
 
-&nbsp;			Marketing
+ 			Marketing
 
-&nbsp;			DevOps
+ 			DevOps
 
-&nbsp;	
+ 
 
-&nbsp;	3. Procedural Cohesion
+ 	3. Procedural Cohesion
 
-&nbsp;		Functions are grouped because they execute in a specific sequence.
+ 		Functions are grouped because they execute in a specific sequence.
 
-&nbsp;		Example: A Authentication System
+ 		Example: A Authentication System
 
-&nbsp;			Take credentials from user
+ 			Take credentials from user
 
-&nbsp;			Check permissions
+ 			Check permissions
 
-&nbsp;			Give token and authorize
+ 			Give token and authorize
 
-&nbsp;	
+ 
 
-&nbsp;	4. Sequential Cohesion
+ 	4. Sequential Cohesion
 
-&nbsp;		Functions are grouped because output of one is the input of next function
+ 		Functions are grouped because output of one is the input of next function
 
-&nbsp;		Example: Calculation radius, area, circumference of circle
+ 		Example: Calculation radius, area, circumference of circle
 
-&nbsp;				
+ 
 
-&nbsp;	5. Functional Cohesion (Best)
+ 	5. Functional Cohesion (Best)
 
-&nbsp;		All modules contribute to a single well defined task.
+ 		All modules contribute to a single well defined task.
 
-&nbsp;		Example: Web Development
+ 		Example: Web Development
 
-&nbsp;			1. Model: Entity
+ 			1. Model: Entity
 
-&nbsp;			2. Service: Operations
+ 			2. Service: Operations
 
-&nbsp;			3. Repository: To perform database task
+ 			3. Repository: To perform database task
 
-&nbsp;			4. Connection termination
+ 			4. Connection termination
 
-&nbsp;			5. Config
+ 			5. Config
 
-&nbsp;			6. Utils 
+ 			6. Utils
 
 
 
@@ -274,105 +274,105 @@ Types of Cohesion:
 
 Types of Coupling:
 
-&nbsp;	Worst to Best
+ 	Worst to Best
 
-&nbsp;	
+ 
 
-&nbsp;	1. Content Coupling (Worst)
+ 	1. Content Coupling (Worst)
 
-&nbsp;		One Module directly modifies another's internal data or logic
+ 		One Module directly modifies another's internal data or logic
 
-&nbsp;		Example:
+ 		Example:
 
-&nbsp;		class Account{
+ 		class Account{
 
-&nbsp;			private double bankBalance;
+ 			private double bankBalance;
 
-&nbsp;		}
+ 		}
 
-&nbsp;		
+ 
 
-&nbsp;		class Hacker{
+ 		class Hacker{
 
-&nbsp;			void steal(Account account){
+ 			void steal(Account account){
 
-&nbsp;				Account.bankBalance = 0;
+ 				Account.bankBalance = 0;
 
-&nbsp;			}
+ 			}
 
-&nbsp;		}
-
-
-
-&nbsp;	2. Common Coupling (Bad)
-
-&nbsp;		Modules share global data across whole process
-
-&nbsp;		Example:
-
-&nbsp;		class Credentials{
-
-&nbsp;			String username;
-
-&nbsp;			String password;
-
-&nbsp;		}
-
-&nbsp;		
-
-&nbsp;		class Login{
-
-&nbsp;			
-
-&nbsp;		}
+ 		}
 
 
 
-&nbsp;		class Registration{
+ 	2. Common Coupling (Bad)
 
-&nbsp;		
+ 		Modules share global data across whole process
 
-&nbsp;		}
+ 		Example:
 
-&nbsp;	
+ 		class Credentials{
 
-&nbsp;	3. Control Coupling 
+ 			String username;
 
-&nbsp;		One module controls the logic another module
+ 			String password;
 
-&nbsp;		Example: Binary Search depends on the sorting.
+ 		}
 
+ 
 
+ 		class Login{
 
-&nbsp;	4. Stamp Coupling
+ 
 
-&nbsp;		Modules shares a composite data structure like object, json, xml, but only use a part of it
-
-&nbsp;		Example: After logging a system module got whole user details
-
-&nbsp;			For Welcome Page only need username
-
-&nbsp;			For ChechOut Page only need of address and phone
+ 		}
 
 
 
-&nbsp;	5. Data Coupling (Good)
+ 		class Registration{
 
-&nbsp;		Modules are communicating via simple data parameters
+ 
 
-&nbsp;		User\_id
+ 		}
 
-&nbsp;		Get\_user\_name(user\_id)
+ 
 
-&nbsp;		Display\_user\_data(user\_id)		
+ 	3. Control Coupling
 
-&nbsp;	
+ 		One module controls the logic another module
 
-&nbsp;	6. No Coupling(Independent Module)
+ 		Example: Binary Search depends on the sorting.
 
-&nbsp;		Modules have no interaction
 
-&nbsp;		Example: Creating a connection module --> Logger Module.
+
+ 	4. Stamp Coupling
+
+ 		Modules shares a composite data structure like object, json, xml, but only use a part of it
+
+ 		Example: After logging a system module got whole user details
+
+ 			For Welcome Page only need username
+
+ 			For ChechOut Page only need of address and phone
+
+
+
+ 	5. Data Coupling (Good)
+
+ 		Modules are communicating via simple data parameters
+
+ 		User\_id
+
+ 		Get\_user\_name(user\_id)
+
+ 		Display\_user\_data(user\_id)
+
+ 
+
+ 	6. No Coupling(Independent Module)
+
+ 		Modules have no interaction
+
+ 		Example: Creating a connection module --> Logger Module.
 
 
 
@@ -386,34 +386,34 @@ Types of Coupling:
 
 Separation OF Concerns:
 
------------------------
+---
 
-&nbsp;	The development process has too many different responsibilities. User Interface design, database process, exception handling, and many other tasks can be examples of responsibilities.
+ 	The development process has too many different responsibilities. User Interface design, database process, exception handling, and many other tasks can be examples of responsibilities.
 
 
 
-What does MVC look like? 
+What does MVC look like?
 
-&nbsp;	Request
+ 	Request
 
-&nbsp;	------->  Controller 
+ 	------->  Controller
 
-&nbsp;	|	      |
+ 	|	      |
 
-&nbsp;	|	  Logic File
+ 	|	  Logic File
 
-&nbsp;	|	      |
+ 	|	      |
 
-&nbsp;     User	    Model
+      User	    Model
 
-&nbsp;	|	      |
+ 	|	      |
 
-&nbsp;	|	    View
-	|	      |
+ 	|	    View
+|	      |
 
-&nbsp;	---------------
+ 	---------------
 
-&nbsp;          Response
+           Response
 
 
 
@@ -421,51 +421,35 @@ What does MVC look like?
 
 Monolithic or Layered Architecture:
 
-&nbsp;	Examples: Creating database 
+ 	Examples: Creating database
 
-&nbsp;	Handling request response
+ 	Handling request response
 
-&nbsp;	UI
+ 	UI
 
-&nbsp;	Message Part
+ 	Message Part
 
 Microservices Architecture:
 
 Model-View-Controller (MVC):
 
-&nbsp;			
+ 
 
 
 
-
-
-
-
-
-
-
-
------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-UML Diagram:
-
-------------
+##### UML Diagram:
 
 Aggregation: ----<>(white colored)
 
 Composition: ----</>(black colored)
 
-Associations: ----> 
+Associations: ---->
 
-&nbsp;	Inheritance --> Is a Relationship
+ 	Inheritance --> Is a Relationship
 
-&nbsp;	Aggregation --> Has a Relationship
+ 	Aggregation --> Has a Relationship
 
-&nbsp;	Composition --> Part Of Relationship
+ 	Composition --> Part Of Relationship
 
 
 
@@ -473,29 +457,29 @@ Unified Modeling Language --> like a blue print (Class and State)
 
 2 Types:
 
-&nbsp;	Structural Diagram: defects the static aspects of the system, which represent those parts of a diagram forming a main structure and therefore stable
+ 	Structural Diagram: defects the static aspects of the system, which represent those parts of a diagram forming a main structure and therefore stable
 
-&nbsp;	Behavioural Diagram: 
+ 	Behavioural Diagram:
 
 
 
-Class Diagram:
+###### Class Diagram:
 
-&nbsp;	Important UML diagram used for software application development
+ 	Important UML diagram used for software application development
 
-&nbsp;	A class diagram describes the types of objects in the 
+ 	A class diagram describes the types of objects in the
 
-&nbsp;	----------->  Association(Straight Line)
+ 	----------->  Association(Straight Line)
 
-&nbsp;	-----------|> Inheritance(Straight Line)
+ 	-----------|> Inheritance(Straight Line)
 
-&nbsp;	-----------|> Realization / Implementation
+ 	-----------|> Realization / Implementation
 
-&nbsp;	----------->  Dependency
+ 	----------->  Dependency
 
-&nbsp;	-----------<> Aggregation
+ 	-----------<> Aggregation
 
-&nbsp;	-----------<//> Composition
+ 	-----------<//> Composition
 
 
 
@@ -506,7 +490,7 @@ Class Diagram:
 
 
 
-&nbsp;--------------------------------
+ --------------------------------
 
 |	class name		|
 
@@ -545,8 +529,6 @@ Class Diagram:
 
 
 
------------------------------------------------------------------------------------------------------------------------------
-
 
 
 
@@ -575,25 +557,23 @@ Home Work: WAP for Cohesion and Coupling for two modules representing high cohes
 
 ### SOLID PRINCIPLES AND DESIGN PRACTICES
 
--------------------------------------------------------------------------
 
 
-
-&nbsp;	Tells the way to write a code.
+ 	Tells the way to write a code.
 
 As a software systems grow, they tend to become complex and harder to change. A Small change in one part can cause unexpected issues elsewhere. this is rigidity and fragility in code.
 
 
-Common problems in large codebases:
----
 
-&nbsp;	Tight Coupling
+## Common problems in large codebases:
 
-&nbsp;	Low Cohesion
+ 	Tight Coupling
 
-&nbsp;	Code Smells
+ 	Low Cohesion
 
-&nbsp;	Difficult Testing and Maintenance
+ 	Code Smells
+
+ 	Difficult Testing and Maintenance
 
 
 
@@ -601,77 +581,79 @@ Common problems in large codebases:
 
 ##### Birth of SOLID Principles:
 
-&nbsp;	Developers Start building large scale systems, they noticed these recurring issues.
+ 	Developers Start building large scale systems, they noticed these recurring issues.
 
-&nbsp;	Need for guidelines to make software, 	
+ 	Need for guidelines to make software,
 
 
 
 #### SOLID:
 
 
-S - Single Responsibility Principle (SRP)
----
 
-&nbsp;	- A Class should have a single responsibility 
+## S - Single Responsibility Principle (SRP)
 
-&nbsp;	- If a class has many responsibility, it increases the possibility of bugs because making changes to one of the it responsibility, could affect the other ones without you knowing
+ 	- A Class should have a single responsibility
+
+ 	- If a class has many responsibility, it increases the possibility of bugs because making changes to one of the it responsibility, could affect the other ones without you knowing
 
 ###### Goal:
 
-&nbsp;	This principle aims to separate behaviours so that if bugs arise as a result of your change, it wont affect other unrelated behaviours.
+ 	This principle aims to separate behaviours so that if bugs arise as a result of your change, it wont affect other unrelated behaviours.
 
-&nbsp;       Each class has a single responsibility and easily able to extend
+        Each class has a single responsibility and easily able to extend
 
-&nbsp;       Testing of business logic become easy
+        Testing of business logic become easy
 
-&nbsp;	
+ 
+
+Home Work:
+
+Case Study : Invoice Processor : SRP
+
+public class InvoiceProcessor{
+
+ 	calculateTotal();
+
+ 	printInvoice();
+
+ 	saveToDBorFile();
+
+ 	sendEmailToCustomer();
+
+}
+
+
+
+
 
 ##### O - Open Closed Principle (OCP)
 
-&nbsp;	- Class should be open for extension but close for modification.
+ 	- Class should be open for extension but close for modification.
 
-&nbsp;	- Changing the current behaviour will affect all the systems using that class.
+ 	- Changing the current behaviour will affect all the systems using that class.
 
 ###### Goal:
 
-&nbsp;	This principles aim to extend a class's behaviour without changing the existing behaviour of that class.
-	This avoid causing bug wherever the class is being used
-
-##### 
-
-##### 
-
-##### L - Liskov Principle (LSP)
-
-&nbsp;	- When a child class cannot perform the same action as its parent class, this can cause bugs.
-
-&nbsp;	- The child class should be able to process the same requests and deliver the same result as the parent class or it could deliver a result that is of the same type.
-
-
+ 	This principles aim to extend a class's behaviour without changing the existing behaviour of that class.
+This avoid causing bug wherever the class is being used
 
 Home Work:
 
 Add Invoice:
-Ad feature following OCP:
+Add feature following OCP:
 
 New Feature: Send notification using SMS.
 
 
 
+##### 
 
+##### L - Liskov Principle (LSP)
 
-##### I - Interface Segregation Principle (ISP)
+ 	- When a child class cannot perform the same action as its parent class, this can cause bugs.
 
-&nbsp;	- Clients should not be forced to depend on methods that they do not use.
-
-&nbsp;	- Separate the class based on the tasks.
-
-
-
-###### Goal:
-
-&nbsp;	This principle aims at splitting a set of actions into smaller sets so that a class executes only the set of actions it requires.
+ 	- The child class should be able to process the same requests and deliver the same result as the parent class or it could deliver a result that is of the same type.
 
 
 
@@ -687,36 +669,84 @@ convertToJPEG();
 
 
 
-###### BENIFITS:
-
-&nbsp;	- Classes are not burdened with unnecessary tasks or methods
-
-&nbsp;	- Interfaces become role specific
-
-&nbsp;	- Promotes flexibility, modularity and maintainability
 
 
+##### I - Interface Segregation Principle (ISP)
 
-##### D - Dependency Inversion Principle
+ 	- Clients should not be forced to depend on methods that they do not use.
 
-&nbsp;	- High Level modules should not depend on low-level modules. Both should depend on the abstraction
-
-&nbsp;	- Abstractions should not depend on details. Details should depend on abstraction
-
-&nbsp;	- *High-Level Module:* Class that executes an action with a tool.
-	- *Low-Level Module:* The tool that is needed to execute the action
-
-&nbsp;	- *Abstraction:* Represents an interface that connects the two classes
-
-&nbsp;	- *Details:* How the tools works
+ 	- Separate the class based on the tasks.
 
 
 
 ###### Goal:
 
-&nbsp;	This principle aims at reducing the dependency of a high-level class on the low-level class by introducing an interface.
+ 	This principle aims at splitting a set of actions into smaller sets so that a class executes only the set of actions it requires.
 
 
+
+###### BENIFITS:
+
+ 	- Classes are not burdened with unnecessary tasks or methods
+
+ 	- Interfaces become role specific
+
+ 	- Promotes flexibility, modularity and maintainability
+
+
+
+Home Work:
+
+Case Study: Smart Appliances Control Fan, AC, Light
+
+SmartDevice{
+
+ 	turnOn();
+
+ 	turnOff();
+
+ 	setTemperature();
+
+ 	dimLight();
+
+ 	Speed();
+
+}
+
+
+
+##### D - Dependency Inversion Principle
+
+ 	- High Level modules should not depend on low-level modules. Both should depend on the abstraction
+
+ 	- Abstractions should not depend on details. Details should depend on abstraction
+
+ 	- *High-Level Module:* Class that executes an action with a tool.
+- *Low-Level Module:* The tool that is needed to execute the action
+
+ 	- *Abstraction:* Represents an interface that connects the two classes
+
+ 	- *Details:* How the tools works
+
+
+
+###### Goal:
+
+ 	This principle aims at reducing the dependency of a high-level class on the low-level class by introducing an interface.
+
+
+
+Home Work:
+
+Case Study: Notification System for email, whatsapp, SMS
+
+
+
+EmailService{
+
+ 	(High Level Module) Notification Manager
+
+}
 
 
 
@@ -724,45 +754,249 @@ convertToJPEG();
 
 ##### Advantages of SOLID Principles:
 
-&nbsp;	- Achieve the reduction in complexity of the code
+ 	- Achieve the reduction in complexity of the code
 
-&nbsp;	- Increase readability, extensibility, and maintenance
+ 	- Increase readability, extensibility, and maintenance
 
-&nbsp;	- Increase scalability, code flexibility, and readability
+ 	- Increase scalability, code flexibility, and readability
 
-&nbsp;	- Achieve Better Testability
+ 	- Achieve Better Testability
 
-&nbsp;	- Reduce tight coupling
+ 	- Reduce tight coupling
 
-&nbsp;	- Reduce error and implement Reusability
+ 	- Reduce error and implement Reusability
 
-&nbsp;	- Increase Parallel development
+ 	- Increase Parallel development
 
 
+
+
+
+
+
+
+
+### Inversion of Control: (IoC)
+
+ 	- Inverting the control
+
+ 	- A principle in software engineering which transfers the control of objects or portions of a program to a container or framework.
+
+ 	- As name suggested it is used to invert different kinds of controls in Object Oriented Design to achieve loose coupling. Here, controls refers to any additional responsibility in a class has other its main responsibility
+
+ 	- The IoC Principle helps in designing loosely coupled classes which make them testable, maintainable and extendible
+
+
+
+###### Types: We have many
+
+Important:
+
+ 	1. Dependency Injection (DI)
+
+ 		- "What happens when one class directly creates the objects it needs?"
+
+ 		  That leads to tight coupling - the main reason we need Dependency Injection
+
+ 		public class ReportService{
+
+ 			private FileReportSaver saver = new FileReportSaver();
+
+ 			public void saveReport(String data){
+
+ 				saver.save(data)
+
+ 			}
+
+ 		}
+
+*NON DI*
+class RestaurantManager{
+
+ 	public void OrderIngredients{
+
+ 		IngredientSupplier supplier = new IngredientSupplier();
+
+ 		supplier.DeliverIngredients();
+
+ 	}
+
+ 	public void ManageKitchen{
+
+ 		Chef chef = new Chef();
+
+ 		chef.CookPasta();
+
+ 		chef.MakePizza();
+
+ 	}
+
+}
+
+
+
+*DI*
+
+class RestaurantManager{
+
+ 	private IngredientSupplier supplier;
+
+ 	private Chef chef;
+
+ 	public RestaurantManager(IngredientSupplier supplier, Chef chef){
+
+ 		this.supplier = supplier;
+
+ 		this.chef = chef;
+
+ 	}
+
+ 	public void OrderIngredients{
+
+ 		supplier.DeliverIngredients();
+
+ 	}
+
+ 	public void ManageKitchen{
+
+ 		chef.CookPasta();
+
+ 		chef.MakePizza();
+
+ 	}
+
+}
+
+
+
+
+
+
+
+
+
+##### ANTI-PATTERNS \& CODE SMELLS:
+
+###### 
+
+###### CODE SMELLS:
+
+ 	Establish the concept of code smells as indicator of potential issues in the code base, often manifesting as patterns that might lead to maintainability, reusability or performance problems
+
+
+
+###### ANTI-PATTERNS:
+
+ 	Defines anti-patterns as recurring solutions that initially appear to be beneficial but often result in negative consequence, such as poor scalability
+
+
+
+
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_X\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+
+31-07-2025
+
+
+
+### CORE LLD AND ARCHITECTURE
+
+
+
+##### Software Architecture:
+
+ 	Software architecture refers to the fundamental structures of a softwsre system and the discipline of creating suvh structure.
+It encompasses the set of significant decisions about the organization of a software system, including:
+
+ 		Structural elements and their interfaces: Components, modules, services, etc
+Behavioural elements: How components interact through interfaces and protocols
+Composition: How components are combined to form a complete system
+
+ 		Architectural Style: Set of principles and conventions used to create a software architecture.
+
+
+
+##### Importance Of Software Architecture
+
+ 	-> Foundation for Quality Attributes
+
+ 	-> Guides Development
+
+ 	-> Facilitates Communication
+
+ 	-> Enables Reusability And Extensibility
+
+
+
+##### Common Architectural Patterns
+
+ 	- *Layered Architecture* --> Separates the system into layers with specific responsibilities, promoting separation of concerns and ease of maintenance
+
+ 	- *Microservices Architecture* --> Structures the application as a collection of loosely coupled services, each implementing a specific business capability
+
+ 	- *Event - Driven Architecture* --> Uses events to trigger and communicate between decoupled services, enabling real-time processing and responsiveness.
+
+
+
+###### *Layered Architecture:*
+
+&nbsp;	Layered architecture is a common architectural pattern used in software development to organize code into horizontal layers into horizontal layers responsible for a specific aspect of the application's functionality. The key characteristics of layered architecture include:
+
+&nbsp;	- Organization  --> the code base is divided into layers with each layer representing a different concern or aspect of the application. These layers are organized hierarchically, typically from bottom to top or from inner to outer layers
+
+&nbsp;	- Separation of Concerns
+
+&nbsp;	- Dependencies
+
+###### 	*Implementation:*
+
+		Layers: Model Layer, Repository/DAO Layer, Service Layer, Presentation/Controller Layer
+
+
+
+&nbsp;	   *Flow of Code:*
+
+		Presentation Layer -----> Service Layer -----> Repository Layer -----> Model Layer
+
+&nbsp;	   Ex:  (StudentController)	 (StudentService)     (StudentRepository)      (Student)
+
+
+
+
+
+DAO - Data Access Object
+
+&nbsp;	- Is a structured pattern used to abstract and encapsulate all access to a data source -  separates the persistence logic from the business logic of the application
+
+&nbsp;	- Why ?
+
+&nbsp;		- To separate concerns 
+
+&nbsp;		- to promote reusability and testability
+
+&nbsp;		- makes it easier to switch between data sources
+
+&nbsp;		- simplifies unit testing by mocking data access
+
+&nbsp;	- When ?
+
+&nbsp;		- Your application interacts with a database or external data source
+
+&nbsp;		- You want to follow best practices like layering
+
+&nbsp;		- You need to perform CRUD operations on entity
+
+&nbsp;	- Common use cases:
+
+&nbsp;		- Employee database
+
+&nbsp;		- Student records
+
+&nbsp;		- Product inventory system	
 
 &nbsp;	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
